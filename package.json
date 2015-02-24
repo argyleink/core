@@ -1,7 +1,7 @@
 {
   "name": "pog-router",
   "description": "Router for Pog JS",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "private": false,
   "author": {
     "name": "Jesse Weed",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pog/router"
+    "url": "https://github.com/pogjs/router"
   },
   "homepage": "http://pogjs.com",
   "keywords": [
@@ -21,7 +21,7 @@
     "node"
   ],
   "bugs": {
-    "url": "https://github.com/pog/router/issues"
+    "url": "https://github.com/pogjs/router/issues"
   },
   "license": "MIT",
   "dependencies": {
