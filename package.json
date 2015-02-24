@@ -1,0 +1,49 @@
+{
+  "name": "pog",
+  "version": "0.0.1",
+  "description": "MVC style framework built for io or node.js",
+  "main": "server.js",
+  "author": {
+    "name": "Jesse Weed",
+    "email": "jesse@jesseweed.com",
+    "url": "http://jesseweed.com",
+    "twitter": "https://twitter.com/jesseweed"
+  },
+  "license": "MIT",
+  "homepage": "http://pogjs.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pogjs/core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pogjs/core/issues"
+  },
+  "keywords": [
+    "node",
+    "io",
+    "koa",
+    "mvc",
+    "framework",
+    "pog",
+    "js",
+    "rest",
+    "api",
+    "app"
+  ],
+  "engines": {
+    "node": "~0.12.0",
+    "npm": "~2.5"
+  },
+  "dependencies": {
+    "colors": "^1.0.3",
+    "koa-hbs": "^0.5.0",
+    "koa-jade": "^0.3.1",
+    "koajs-nunjucks": "^1.0.1",
+    "koala": "^0.9.1",
+    "pog-router": "0.0.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-nodemon": "^1.0.5"
+  }
+}
