@@ -4,15 +4,6 @@ module.exports = function(app) {
 
 
   // >  - - - - - - - - <
-  // >  STATIC FILES    <
-  // >  - - - - - - - - <
-
-
-  var serve = require('koa-static');
-  app.use( serve( app.config.root + '/public/') );
-
-
-  // >  - - - - - - - - <
   // >  HTML TEMPLATES  <
   // >  - - - - - - - - <
 
@@ -52,37 +43,12 @@ module.exports = function(app) {
 
 
   // >  - - - - - - - - <
-  // >  CSS PROCESSORS  <
+  // >  STATIC FILES    <
   // >  - - - - - - - - <
 
 
-  // STYLUS
-  if ( app.config.engines.css.template === 'stylus' ) {
-
-    console.log('INFO: '.blue + 'setting stylus as css processor');
-
-    var stylus = require('koa-stylus');
-
-    app.use(stylus({
-      src: app.base + '/public/css',
-      dest: app.base + '/public/css'
-    }));
-
-  } else if ( app.config.engines.css.template === 'sass' ) {
-
-    console.log('INFO: '.blue + 'setting sass as css processor');
-
-    var sass = require('koa-sass');
-    app.use(sass(app.base + '/public'));
-
-  } else if ( app.config.engines.css.template === 'less' ) {
-
-    console.log('INFO: '.blue + 'setting less as css processor');
-
-    var less = require('koa-less');
-    app.use(less(app.base + '/public'));
-
-  }
+  var serve = require('koa-static');
+  app.use( serve( app.config.root + '/public/') );
 
 
 };

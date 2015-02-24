@@ -17,10 +17,13 @@ module.exports = function (app) {
 
     engines : {
       html : {
-        template: 'jade', // options: (handlebars|jade)
+        template: 'jade', // options: (handlebars|jade|nunjucks)
         extension: '.jade'
       },
-      css : 'stylus', // options: (stylus|sass|less) - set false to just use vanilla css
+      css : {
+        template: 'stylus', // options: (stylus|sass|less) - set false to just use vanilla css
+        extension: '.styl'
+      },
       cssLibrary : false, // options: (axis|bourbon|nib) - set to false for none
     },
 
