@@ -14,7 +14,7 @@ pog.inform(app, 'start'); // START UP MESSAGE
 
 // REQUIRED SETTINGS & CONFIG FILES
 require(__dirname + '/config/environment/' + process.env.NODE_ENV)(app); // ENVIRONMENT SPECIFIC SETTINGS
-require(__dirname + '/config/views')(app, pog); // VIEW SETTINGS
+require(__dirname + '/config/server')(app, pog); // VIEW SETTINGS
 require('pog-router')(app); // INCLUDE AUTO ROUTER
 
 
