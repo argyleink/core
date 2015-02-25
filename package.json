@@ -34,10 +34,12 @@
     "colors": "^1.0.3",
     "koa-hbs": "^0.5.0",
     "koa-jade": "^0.3.1",
+    "koa-less": "0.0.3",
     "koa-static": "^1.4.9",
     "koajs-nunjucks": "^1.0.1",
     "koala": "^0.9.1",
-    "pog-router": "0.0.5"
+    "pog-router": "0.0.5",
+    "stylus": "^0.50.0"
   },
   "devDependencies": {
     "gulp": "^3.8.11",

@@ -4,6 +4,35 @@ module.exports = function(app) {
 
 
   // >  - - - - - - - - <
+  // >  CSS PROCESSORS  <
+  // >  - - - - - - - - <
+
+  // var stylus = require('koa-stylus');
+
+  var compress;
+
+  // SASS
+  // not working with iojs yet :/
+  if ( app.config.engines.css.template === 'sass' ) {
+    console.log('INFO: '.blue + 'using sass for css');
+    app.use(require('koa-sass')(app.config.root + '/public/css/'));
+  }
+
+  // STYLUS
+  else if ( app.config.engines.css.template === 'stylus' ) {
+    console.log('INFO: '.blue + 'using stylus for css');
+    app.use(require('koa-stylus')(app.config.root + '/public/css/'));
+  }
+
+  // LESS
+  // not working with iojs yet :/
+  else if ( app.config.engines.css.template === 'less' ) {
+    console.log('INFO: '.blue + 'using less for css');
+    app.use(require('koa-less')('./public/css/'));
+  }
+
+
+  // >  - - - - - - - - <
   // >  HTML TEMPLATES  <
   // >  - - - - - - - - <
 

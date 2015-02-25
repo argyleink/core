@@ -19,7 +19,7 @@ gulp.task('nodemon', function (cb) {
   var called = false;
   return nodemon({
     script: 'server.js',
-    ext: 'js, jade, styl',
+    ext: 'js, jade, hbs, nj, styl, sass, less, css',
     ignore: ['README.md', 'node_modules/**', '.DS_Store'],
     'execMap': {
       'js': 'iojs'
