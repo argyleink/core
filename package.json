@@ -1,7 +1,7 @@
 {
   "name": "pog-router",
   "description": "Router for Pog JS",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "author": {
     "name": "Jesse Weed",
