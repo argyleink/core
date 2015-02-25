@@ -39,7 +39,7 @@
     "koa-stylus": "0.0.3",
     "koajs-nunjucks": "^1.0.1",
     "koala": "^0.9.1",
-    "pog-router": "0.0.5"
+    "pog-router": "0.0.6"
   },
   "devDependencies": {
     "gulp": "^3.8.11",
