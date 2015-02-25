@@ -12,7 +12,7 @@ module.exports = function(app) {
   var compress;
 
   // SASS
-  // not working with iojs yet :/
+  // Not working with iojs yet. Waiting on node-sass to get io.js compatibility :/
   if ( app.config.engines.css.template === 'sass' ) {
     console.log('INFO: '.blue + 'using sass for css');
     app.use(require('koa-sass')(app.config.root + '/public/css/'));
@@ -80,7 +80,6 @@ module.exports = function(app) {
   // >  - - - - - - - - <
   // >  STATIC FILES    <
   // >  - - - - - - - - <
-
 
   var serve = require('koa-static');
   app.use( serve( app.config.root + '/public/') );
