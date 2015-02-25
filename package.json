@@ -36,10 +36,10 @@
     "koa-jade": "^0.3.1",
     "koa-less": "0.0.3",
     "koa-static": "^1.4.9",
+    "koa-stylus": "0.0.3",
     "koajs-nunjucks": "^1.0.1",
     "koala": "^0.9.1",
-    "pog-router": "0.0.5",
-    "stylus": "^0.50.0"
+    "pog-router": "0.0.5"
   },
   "devDependencies": {
     "gulp": "^3.8.11",
