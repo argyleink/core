@@ -13,6 +13,9 @@ gulp.task('default', ['nodemon'], function () {
 });
 
 
+gulp.task('start', ['nodemon']);
+
+
 
 // NODEMON
 gulp.task('nodemon', function (cb) {
