@@ -17,12 +17,12 @@ module.exports = function (app) {
 
     engines : {
       html : {
-        template: 'jade', // options: (handlebars|jade|nunjucks)
-        extension: '.jade' // options: (.hbs|.jade|.js)
+        template : 'jade', // options: (handlebars|jade|nunjucks)
+        extension : '.jade' // options: (.hbs|.jade|.js)
       },
       css : {
-        template: 'stylus', // options: (stylus|sass|less) - set false to just use vanilla css
-        extension: '.styl' // options: (.styl|.sass|.less)
+        template : 'stylus', // options: (stylus|sass|less) - set false to just use vanilla css
+        extension : '.styl' // options: (.styl|.sass|.less)
       },
       cssLibrary : false, // options: (axis|bourbon|nib) - set to false for none
     },
