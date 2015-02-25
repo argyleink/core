@@ -8,18 +8,15 @@
 
         <title>{{title}}</title>
 
-        <link rel="shortcut icon" type="image/png" href="{{site.address}}favicon.png">
-
         <link rel="stylesheet" href="{{site.dir.css}}styles.css">
-
-        {{bowerHead}}
-
-        {{#if css}}
-          {{#each css}}
-            <link rel="stylesheet" href="{{site.dir.css}}{{this}}">
-          {{/each}}
-        {{/if}}
 
     </head>
 
 <body>
+
+  {% block content %}
+    Default nunjucks template
+  {% endblock %}
+
+</body>
+</html>

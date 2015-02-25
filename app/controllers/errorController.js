@@ -5,7 +5,7 @@ exports.throwGeneric = function *(app, view) {
 
 	this.body = 'Unknown error has occurred';
 
-	yield view.render('errors/404', {
+	yield view.render('errors/default', {
 		title : app.err,
 		error: app.err,
 		site: app,
