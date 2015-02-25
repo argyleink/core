@@ -4,7 +4,8 @@
 exports.index = function *(app, view) {
 
   yield view.render('index', {
-    title : app.name
+    title : app.name,
+    site: app
   });
 
 };

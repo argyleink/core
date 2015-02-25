@@ -8,6 +8,7 @@ exports.throwGeneric = function *(app, view) {
 	yield view.render('errors/404', {
 		title : app.err,
 		error: app.err,
+		site: app,
 		url: view.request.originalUrl
 	});
 
@@ -20,6 +21,7 @@ exports.throw404 = function *(app, view) {
 	yield view.render('errors/404', {
 		title : app.err,
 		error: app.err,
+		site: app,
 		url: view.request.originalUrl
 	});
 
@@ -34,6 +36,7 @@ exports.throw500 = function *(app, view) {
 	yield view.render('errors/500', {
 		title : app.err,
 		error: app.err,
+		site: app,
 		url: view.request.originalUrl
 	});
 
