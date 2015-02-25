@@ -39,6 +39,8 @@ module.exports = function(app) {
   // HANDLEBARS
   if ( app.config.engines.html.template === 'handlebars' ) {
 
+    console.log('INFO: '.blue + 'rendering templates with ' + app.config.engines.html.template);
+
     let htmlEngine = require('koa-hbs');
 
     app.use(htmlEngine.middleware({
@@ -47,6 +49,8 @@ module.exports = function(app) {
 
   // JADE
   } else if ( app.config.engines.html.template === 'jade' ) {
+
+    console.log('INFO: '.blue + 'rendering templates with ' + app.config.engines.html.template);
 
     let htmlEngine = require('koa-jade');
 
@@ -61,6 +65,8 @@ module.exports = function(app) {
 
   // NUNJUCKS
   } else if ( app.config.engines.html.template === 'nunjucks' ) {
+
+    console.log('INFO: '.blue + 'rendering templates with ' + app.config.engines.html.template);
 
     let htmlEngine = require('koajs-nunjucks');
     app.use( htmlEngine(app.base + '/app/views', {}) );
