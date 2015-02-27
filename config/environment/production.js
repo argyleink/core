@@ -5,8 +5,6 @@ var os = require('os');
 
 module.exports = function (app) {
 
-  var tesla = require('../../lib/tesla')(app);
-
   // global settings
   app.domain = 'mydomain.com';
   app.environment = 'production';
@@ -20,6 +18,6 @@ module.exports = function (app) {
     js : app.address + 'js/'
   };
 
-  tesla.log('INFO:'.blue + ' ' + app.env + ' config loaded' );
+  console.log('INFO:'.blue + ' ' + app.env + ' config loaded' );
 
 };
