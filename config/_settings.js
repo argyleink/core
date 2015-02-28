@@ -7,8 +7,6 @@ module.exports = function (app) {
 
   app.name = 'Pog JS'; // the name of your app
 
-  // app.site = {},
-
   app.config = {
 
     browserSync : {
@@ -63,7 +61,6 @@ module.exports = function (app) {
     socket : false // whether to enable socket.io server
 
   };
-
 
   // some default meta settings for <head>
   app.meta = {
