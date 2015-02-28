@@ -39,15 +39,10 @@ module.exports = function(app) {
 
     let htmlEngine = require('koa-hbs');
 
-
     app.use(htmlEngine.middleware({
       viewPath: app.base + '/app/views',
       partialsPath:app.base + '/app/views/partials'
     }));
-
-
-    console.log(app.base + '/app/views/partials');
-
 
   // JADE
   } else if ( app.config.engines.html.template === 'jade' ) {

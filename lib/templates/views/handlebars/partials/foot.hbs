@@ -4,5 +4,9 @@
 	{{/each}}
 {{/if}}
 
+{{#if site.config.polyfills}}
+	<script src="/polyfill.js"></script>
+{{/if}}
+
 </body>
 </html>

@@ -1,9 +1,11 @@
-{{bowerFoot}}
-
 {{#if js}}
 	{{#each js}}
 		<script src="{{site.dir.js}}{{this}}"></script>
 	{{/each}}
+{{/if}}
+
+{{#if site.config.polyfills}}
+	<script src="/polyfill.js"></script>
 {{/if}}
 
 </body>

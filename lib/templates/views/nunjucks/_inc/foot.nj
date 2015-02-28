@@ -1,0 +1,9 @@
+{% if js %}
+  {% for script in js %}
+    <script src="{{site.dir.js}}{{script}}"></script>
+  {% endfor %}
+{% endif %}
+
+{% if site.config.polyfills %}
+  <script src="/polyfill.js"></script>
+{% endif %}
