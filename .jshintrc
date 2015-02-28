@@ -20,10 +20,10 @@
     "trailing": true,
     "smarttabs": false,
     "predef": [
-        "$",
         "define",
         "require",
         "exports",
+        "io",
         "module",
         "describe",
         "before",
