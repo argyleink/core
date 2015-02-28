@@ -1,7 +1,7 @@
 'use strict';
 
-const koala    = require('koala'),
-      app      = koala();
+const koa    = require('koa'),
+      app      = koa();
       app.base = __dirname;
 
 require('colors'); // PRETTY CONSOLE LOGGING
