@@ -7,10 +7,6 @@ module.exports = function(app) {
   // >  CSS PROCESSORS  <
   // >  - - - - - - - - <
 
-  // var stylus = require('koa-stylus');
-
-  var compress;
-
   // SASS
   // Not working with iojs yet. Waiting on node-sass to get io.js compatibility :/
   if ( app.config.engines.css.template === 'sass' ) {
@@ -84,11 +80,22 @@ module.exports = function(app) {
 
 
   // >  - - - - - - - - <
-  // >  STATIC FILES    <
+  // >  MISCELLANEOUS   <
   // >  - - - - - - - - <
 
-  var serve = require('koa-static');
-  app.use( serve( app.config.root + '/public/') );
+  // GZIP
+  if ( app.config.gzip === true ) app.use( require('koa-gzip')() );
+
+  // ENABLE POLYFILLS
+  if ( app.config.polyfills === true ) app.use(require('koa-polyfills')());
+
+  // ENABLE CORS
+  if ( app.config.cors === true ) app.use(require('koa-cors')());
+
+  // SERVE STATIC FILES
+  app.use( require('koa-static')( app.config.root + '/public/') );
+
+
 
 
 };

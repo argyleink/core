@@ -31,10 +31,18 @@
     "app"
   ],
   "dependencies": {
+    "browser-sync": "^2.2.1",
     "colors": "^1.0.3",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-csso": "^1.0.0",
+    "gulp-if": "^1.2.5",
+    "gulp-load-plugins": "^0.8.1",
+    "gulp-size": "^1.2.1",
+    "koa-cors": "0.0.14",
     "koa-hbs": "^0.5.0",
     "koa-jade": "^0.3.1",
     "koa-less": "0.0.3",
+    "koa-polyfills": "^2.0.0",
     "koa-static": "^1.4.9",
     "koa-stylus": "0.0.3",
     "koajs-nunjucks": "^1.0.1",

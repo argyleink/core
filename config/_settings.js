@@ -11,10 +11,18 @@ module.exports = function (app) {
 
   app.config = {
 
+    browserSync : {
+      use : true,
+      port : 3000, // port to run the server on
+    },
+
     cache : false, // whether to use caching
 
-    debug : true,
+    cors : true, // enable CORS - https://github.com/evert0n/koa-cors
 
+    debug : true, // enable or disable console logging
+
+    // set your html & css template engine
     engines : {
       html : {
         template : 'jade', // options: (handlebars|jade|nunjucks)
@@ -27,8 +35,11 @@ module.exports = function (app) {
       cssLibrary : false, // options: (axis|bourbon|nib) - set to false for none
     },
 
+    gzip : true, // whether to enable gzip compression
+
     logging : {
-      console: true
+      console : true, // whether to allow tesla to log messages to the node console
+      files : false // this doesn't do anything yet, eventually it will write .log files
     },
 
     port : 1981, // port to run the server on
@@ -39,6 +50,8 @@ module.exports = function (app) {
       js : true // whether to pretify js
     },
 
+    polyfills: true, // whether to enable polyfills (https://github.com/polyfills/polyfills)
+
     protocol : 'http://', // options: (http|https)
 
     publicDir : './public/', // public directory where images, javascript, css, etc is stored
@@ -47,7 +60,7 @@ module.exports = function (app) {
 
     secret : 'supercalifragilisticexpialidocious', // placeholder for now, will be implemented later
 
-    socket : false // WHETHER TO ENABLE SOCKETS
+    socket : false // whether to enable socket.io server
 
   };
 
