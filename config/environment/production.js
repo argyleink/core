@@ -7,8 +7,8 @@ module.exports = function (app) {
 
   // global settings
   app.domain = 'mydomain.com';
-  app.environment = 'production';
-  app.url = app.config.protocol + app.domain + '/'; // base url
+  app.env = 'production';
+  app.address = app.config.protocol + app.domain + '/'; // base url
 
   // directories
   app.dir = {
