@@ -7,3 +7,10 @@
 {% if site.config.polyfills %}
   <script src="/polyfill.js"></script>
 {% endif %}
+
+{% if site.config.socket.use %}
+  <script src="http://localhost:{{site.config.socket.port}}/socket.io/socket.io.js"></script>
+  <script>
+      var socket = io.connect('http://localhost:{{site.config.socket.port}}');
+  </script>
+{% endif %}

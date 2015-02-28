@@ -10,3 +10,8 @@ if ( locals.site.environment === 'development' )
 if ( locals.site.config.polyfills === true )	
 	// Load polyfill script
 	script(src='/polyfill.js')
+			
+if ( locals.site.config.socket.use === true )	
+	script(src='http://localhost:#{site.config.socket.port}/socket.io/socket.io.js')
+	script.
+		var socket = io.connect('http://localhost:#{site.config.socket.port}');

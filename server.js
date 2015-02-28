@@ -12,6 +12,9 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development'; // SET DEFAULT ENV
 let pog = require('./lib/pog')(app); // INCLUDE POG LIB
 pog.inform(app, 'start'); // START UP MESSAGE
 
+if (app.config.socket.use) {
+  require('./app/sockets')(app);
+}
 
 // REQUIRED SETTINGS & CONFIG FILES
 require(__dirname + '/config/environment/' + process.env.NODE_ENV)(app); // ENVIRONMENT SPECIFIC SETTINGS

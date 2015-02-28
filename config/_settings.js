@@ -23,8 +23,8 @@ module.exports = function (app) {
     // set your html & css template engine
     engines : {
       html : {
-        template : 'handlebars', // options: (handlebars|jade|nunjucks)
-        extension : '.hbs' // options: (.hbs|.jade|.js)
+        template : 'jade', // options: (handlebars|jade|nunjucks)
+        extension : '.jade' // options: (.hbs|.jade|.js)
       },
       css : {
         template : 'stylus', // options: (stylus|sass|less) - set false to just use vanilla css
@@ -58,7 +58,10 @@ module.exports = function (app) {
 
     secret : 'supercalifragilisticexpialidocious', // placeholder for now, will be implemented later
 
-    socket : false // whether to enable socket.io server
+    socket : {
+      use: true, // WHETHER TO ENABLE SOCKETS
+      port: 1982
+    }
 
   };
 

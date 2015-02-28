@@ -8,5 +8,14 @@
 	<script src="/polyfill.js"></script>
 {{/if}}
 
+
+{{#if site.config.socket.use }}
+	<script src="http://localhost:{{site.config.socket.port}}/socket.io/socket.io.js"></script>
+	<script>
+			var socket = io.connect("http://localhost:{{site.config.socket.port}}");
+	</script>
+{{/if}}
+
+
 </body>
 </html>
