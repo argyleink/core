@@ -18,15 +18,15 @@ module.exports = function (app) {
 
     cache : false, // whether to use caching
 
-    cors : true, // enable CORS - https://github.com/evert0n/koa-cors
+    cors : false, // enable CORS - https://github.com/evert0n/koa-cors
 
     debug : true, // enable or disable console logging
 
     // set your html & css template engine
     engines : {
       html : {
-        template : 'jade', // options: (handlebars|jade|nunjucks)
-        extension : '.jade' // options: (.hbs|.jade|.js)
+        template : 'handlebars', // options: (handlebars|jade|nunjucks)
+        extension : '.hbs' // options: (.hbs|.jade|.js)
       },
       css : {
         template : 'stylus', // options: (stylus|sass|less) - set false to just use vanilla css
@@ -50,7 +50,7 @@ module.exports = function (app) {
       js : true // whether to pretify js
     },
 
-    polyfills: true, // whether to enable polyfills (https://github.com/polyfills/polyfills)
+    polyfills: false, // whether to enable polyfills (https://github.com/polyfills/polyfills)
 
     protocol : 'http://', // options: (http|https)
 
