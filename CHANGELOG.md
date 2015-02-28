@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.2
+- add missing g-zip module
+
 ## 0.1.1
 - add Procfile for heroku deploys
 - add engines to package file
