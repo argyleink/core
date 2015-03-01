@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.1
+- add log folder
+
 ## 0.2.0
 - allow disabling of auto-router
 - move socket.io info log to server.js
