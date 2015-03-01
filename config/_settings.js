@@ -16,6 +16,8 @@ module.exports = function (app) {
       port : 3000, // port to run the server on
     },
 
+    db : 'rethink', // rethink, mongo, couch, redis, mysql, postgress
+
     cache : false, // whether to use caching
 
     cors : false, // enable CORS - https://github.com/evert0n/koa-cors
@@ -35,13 +37,15 @@ module.exports = function (app) {
       cssLibrary : false, // options: (axis|bourbon|nib) - set to false for none
     },
 
-    errorReporting : true, // whether to send error message to browser, or display a generic error
+    errorReporting : {
+      browser: true, // whether to send error message to browser, or display a generic error
+      file: true // write errors to /log/pog.log files
+    },
 
     gzip : true, // whether to enable gzip compression
 
     logging : {
-      console : true, // whether to allow tesla to log messages to the node console
-      files : true // this doesn't do anything yet, eventually it will write .log files
+      console : true // whether to allow tesla to log messages to the node console
     },
 
     port : 1981, // port to run the server on
