@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "description": "MVC style framework built for io or node.js",
   "main": "server.js",
+  "private": false,
   "author": {
     "name": "Jesse Weed",
     "email": "jesse@jesseweed.com",
@@ -42,12 +43,14 @@
     "koa-gzip": "^0.1.0",
     "koa-hbs": "^0.5.0",
     "koa-jade": "^0.3.1",
+    "koa-json-logger": "0.0.18",
     "koa-less": "0.0.3",
     "koa-polyfills": "^2.0.0",
+    "koa-route": "^2.4.0",
     "koa-static": "^1.4.9",
     "koa-stylus": "0.0.3",
     "koajs-nunjucks": "^1.0.1",
-    "pog-router": "0.0.6",
+    "pog-router": "0.1.0",
     "socket.io": "^1.3.4"
   },
   "devDependencies": {
