@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.2
+- fix includes in default jade template
+
 ## 0.2.1
 - add log folder
 

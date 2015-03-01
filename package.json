@@ -1,6 +1,6 @@
 {
   "name": "pog-core",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "MVC style framework built for io or node.js",
   "main": "server.js",
   "private": false,
