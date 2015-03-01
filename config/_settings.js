@@ -9,6 +9,8 @@ module.exports = function (app) {
 
   app.config = {
 
+    autoRouter : true, // whether or not to use the auto routing system (https://github.com/pogjs/router)
+
     browserSync : {
       use : true,
       port : 3000, // port to run the server on
@@ -33,11 +35,13 @@ module.exports = function (app) {
       cssLibrary : false, // options: (axis|bourbon|nib) - set to false for none
     },
 
+    errorReporting : true, // whether to send error message to browser, or display a generic error
+
     gzip : true, // whether to enable gzip compression
 
     logging : {
       console : true, // whether to allow tesla to log messages to the node console
-      files : false // this doesn't do anything yet, eventually it will write .log files
+      files : true // this doesn't do anything yet, eventually it will write .log files
     },
 
     port : 1981, // port to run the server on
