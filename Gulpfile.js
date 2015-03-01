@@ -120,7 +120,7 @@ gulp.task('nodemon', function (cb) {
   return $.nodemon({
     script: 'server.js',
     ext: 'js, jade, hbs, nj, styl, sass, less, css',
-    ignore: ['README.md', 'node_modules/**', '.DS_Store'],
+    ignore: ['README.md', '.DS_Store'],
     'execMap': {
       'js': 'iojs'
     }
