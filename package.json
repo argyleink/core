@@ -1,7 +1,7 @@
 {
   "name": "pog-router",
   "description": "Router for Pog JS",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "private": false,
   "author": {
     "name": "Jesse Weed",
@@ -28,7 +28,5 @@
     "colors": "^1.0.3",
     "koa-router": "^4.2.0"
   },
-  "_id": "tesla-router@0.1.0",
-  "_shasum": "a55f7b900a3bf7d05d11603d7ff44a7e88b2ba40",
-  "_from": "/Users/jesseweed/Sites/tesla-modules/tesla-router"
+
 }
