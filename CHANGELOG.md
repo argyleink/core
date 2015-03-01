@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0
+- allow disabling of auto-router
+- move socket.io info log to server.js
+- refactor controllers
+- remove node_modules from ignore list & reload if they change
+- update to latest pog router
+- update README
+
 ## 0.1.2
 - add missing g-zip module
 
