@@ -1,11 +1,10 @@
 'use strict';
 
-// DEFAULT/INDEX PAGE
-exports.index = function *(app, view) {
+module.exports = function *(pog) {
 
-  yield view.render('index', {
-    title : app.name,
-    site: app
+  return yield pog.render('index', {
+    title : pog.app.name,
+    site: pog.app
   });
 
 };
