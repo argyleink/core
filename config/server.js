@@ -10,22 +10,28 @@ module.exports = function(app) {
   // SASS
   // Not working with iojs yet. Waiting on node-sass to get io.js compatibility :/
   if ( app.config.engines.css.template === 'sass' ) {
-    console.log('INFO: '.blue + 'using sass for css');
+    app.log('INFO: '.blue + 'using ' + 'sass'.yellow + ' for css');
     app.use(require('koa-sass')(app.config.root + '/public/css/'));
   }
 
   // STYLUS
   else if ( app.config.engines.css.template === 'stylus' ) {
-    console.log('INFO: '.blue + 'using stylus for css');
+    app.log('INFO: '.blue + 'using ' + 'stylus'.yellow + ' for css');
     app.use(require('koa-stylus')(app.config.root + '/public/css/'));
   }
 
   // LESS
   // not working with iojs yet :/
   else if ( app.config.engines.css.template === 'less' ) {
-    console.log('INFO: '.blue + 'using less for css');
+    app.log('INFO: '.blue + 'using ' + 'less'.yellow + ' for css');
     app.use(require('koa-less')('./public/css/'));
   }
+
+  // >  - - - - - - - - <
+  // >  OPEN DATABASE   <
+  // >  - - - - - - - - <
+
+  if ( app.config.db !== false ) require(app.base + '/config/db')(app);
 
 
   // >  - - - - - - - - <
@@ -35,7 +41,7 @@ module.exports = function(app) {
   // HANDLEBARS
   if ( app.config.engines.html.template === 'handlebars' ) {
 
-    console.log('INFO: '.blue + 'rendering templates with ' + app.config.engines.html.template);
+    app.log('INFO: '.blue + 'rendering templates with ' + app.config.engines.html.template.yellow);
 
     let htmlEngine = require('koa-hbs');
 
@@ -47,7 +53,7 @@ module.exports = function(app) {
   // JADE
   } else if ( app.config.engines.html.template === 'jade' ) {
 
-    console.log('INFO: '.blue + 'rendering templates with ' + app.config.engines.html.template);
+    app.log('INFO: '.blue + 'rendering templates with ' + app.config.engines.html.template.yellow);
 
     let htmlEngine = require('koa-jade');
 
@@ -63,7 +69,7 @@ module.exports = function(app) {
   // NUNJUCKS
   } else if ( app.config.engines.html.template === 'nunjucks' ) {
 
-    console.log('INFO: '.blue + 'rendering templates with ' + app.config.engines.html.template);
+    app.log('INFO: '.blue + 'rendering templates with ' + app.config.engines.html.template.yellow);
 
     let htmlEngine = require('koajs-nunjucks');
     app.use( htmlEngine(app.base + '/app/views', {}) );
