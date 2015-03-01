@@ -18,6 +18,6 @@ module.exports = function (app) {
     js : app.address + 'js/'
   };
 
-  console.log('INFO:'.blue + ' ' + app.env + ' config loaded' );
+  app.log('INFO:'.blue + ' ' + app.env.yellow + ' config loaded' );
 
 };
