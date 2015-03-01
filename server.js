@@ -9,24 +9,17 @@ require('fs'); // FILE SYSTEM
 require(__dirname + '/config/_settings')(app); // MAIN APP SETTINGS
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'; // SET DEFAULT ENVIRONMENT
 
-let pog = require('./lib/pog')(app); // INCLUDE POG LIB
+let pog = app.pog = require('./lib/pog')(app); // INCLUDE POG LIB
+app.log = pog.log;
 pog.inform(app, 'start'); // START UP MESSAGE
 
 // REQUIRED SETTINGS & CONFIG FILES
 require(__dirname + '/config/environment/' + process.env.NODE_ENV)(app); // ENVIRONMENT SPECIFIC SETTINGS
 require(__dirname + '/config/server')(app, pog); // VIEW SETTINGS
 
-// CREATE ERROR LOGS
-if (app.config.logging.files === true ) {
-  const koaJsonLogger = require('koa-json-logger');
-  app.use(koaJsonLogger({
-    name: 'pog'
-  }));
-}
-
 // ENABLE SOCKET.IO
 if (app.config.socket.use === true ) {
-  console.log('INFO: '.blue + 'enabling socket.io server');
+  app.log('INFO: '.blue + 'enabling ' + 'socket.io'.yellow + ' server');
   require('./app/sockets')(app);
 }
 
