@@ -4,6 +4,6 @@ module.exports = function (app) {
 
   app.log('INFO: '.blue + 'using ' + 'rethinkdb'.yellow + ' as pog database.');
 
-  const db = require('thinky');
+  app.db = require('thinky')();
 
 };

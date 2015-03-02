@@ -4,6 +4,6 @@ module.exports = function (app) {
 
   app.log('INFO: '.blue + 'using ' + 'mongodb'.yellow + ' as pog database.');
 
-  const db = require('mongoose');
+  app.db = require('mongoose');
 
 };
