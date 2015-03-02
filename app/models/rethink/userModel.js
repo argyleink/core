@@ -1,22 +1,24 @@
 module.exports = function (app) {
 
-  const colors = require('colors'),
-        r = require('rethinkdbdash')();
-
-
   return {
 
-    // FIND ALL ITEMS
-    all : function ( options, cb ) {
-      app.log('userModel.all');
+    all : function ( ) {
+    },
 
-      r.table('users').get('orphee@gmail.com').run().then(function(user) {
-      }).error(function(err) {
-        app.log(err);
-      });
+    create : function ( ) {
+    },
 
-      return true;
-    }
+    delete : function ( ) {
+    },
+
+    find : function ( ) {
+    },
+
+    read : function ( ) {
+    },
+
+    update : function ( ) {
+    },
 
   };
 
