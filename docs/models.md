@@ -22,7 +22,7 @@ This will automatically load  ```app/controllers/blogController.js``` as well as
 
 ## CUSTOM
 
-If you are not happy with the default routes, you can easily customize them like so:
+If you're not happy with the default routes, you can easily customize them like so:
 
 ```
 pog.model.load('user', {
@@ -65,7 +65,7 @@ app.model.load('blog', {
       params : ':term/'
     },
     write : {
-      type: 'post',
+      type: 'post'
     },
   }
 });
@@ -75,19 +75,24 @@ app.model.load('blog', {
 ##### This will create the following url routes and methods:
 
 - [http://localhost/blog/read/awesome-blog-post/12345](http://localhost/blog/read/awesome-blog-post/12345) [ GET ]
+- [http://localhost/blog/search/cats](http://localhost/blog/search/cats) [ GET ]
 - [http://localhost/blog/write](http://localhost/blog/write)                                               [ POST ]
 
 
-The value of any url parameters will be passed to your controller in a "data" object. Here's an example of how you can access the data in your controlloer:
+The value of any url parameters will be passed to your controller in a "data" object. Here's an example of how you can access the data in your controller:
 
 ```
-
-exports.other = function *(pog, data) {
+exports.read = function *(pog, data) {
 
   return yield pog.render('blog/read', {
     title : data.title,
     id: data.id
   });
+
+};
+
+
+search = function *(pog, data) {
 
   return yield pog.render('blog/search', {
     search_term : data.term,
@@ -95,7 +100,6 @@ exports.other = function *(pog, data) {
   });
 
 };
-
 ```
 
 
