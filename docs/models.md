@@ -22,7 +22,7 @@ This will automatically load  ```app/controllers/blogController.js``` as well as
 
 ## CUSTOM
 
-If you are not happy with the default routes, you can easily customize them:
+If you are not happy with the default routes, you can easily customize them like so:
 
 ```
 pog.model.load('user', {
@@ -32,8 +32,8 @@ pog.model.load('user', {
     login : 'post',
     info : 'get',
     find : 'get',
-    remove : 'post',
-    update : 'post'
+    remove : 'delete',
+    update : 'put'
   }
 });
 ```
@@ -44,8 +44,8 @@ Notice the use of the ```base``` property above. This allows you the base of the
 - [http://localhost/api/v1/user/info](http://localhost/api/v1/user/info)          [ POST ]
 - [http://localhost/api/v1/user/login](http://localhost/api/v1/user/login)        [ GET ]
 - [http://localhost/api/v1/user/register](http://localhost/api/v1/user/register)  [ GET ]
-- [http://localhost/api/v1/user/remove](http://localhost/api/v1/user/remove)      [ POST ]
-- [http://localhost/api/v1/user/update](http://localhost/api/v1/user/update)      [ POST ]
+- [http://localhost/api/v1/user/remove](http://localhost/api/v1/user/remove)      [ DELETE ]
+- [http://localhost/api/v1/user/update](http://localhost/api/v1/user/update)      [ PUT ]
 
 
 
