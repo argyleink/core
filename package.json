@@ -51,7 +51,7 @@
     "koajs-nunjucks": "^1.0.1",
     "pog-router": "0.1.1",
     "socket.io": "^1.3.4",
-    "thinky": "^1.16.6",
+    "thinky": "^1.16.6"
   },
   "devDependencies": {
     "gulp": "^3.8.11",
