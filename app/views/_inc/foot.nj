@@ -1,6 +1,6 @@
 {% if js %}
   {% for script in js %}
-    <script src="{{site.dir.js}}{{script}}"></script>
+    <script src="{{site.public.js}}{{script}}"></script>
   {% endfor %}
 {% endif %}
 

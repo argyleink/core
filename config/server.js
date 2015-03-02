@@ -11,20 +11,20 @@ module.exports = function(app) {
   // Not working with iojs yet. Waiting on node-sass to get io.js compatibility :/
   if ( app.config.engines.css.template === 'sass' ) {
     app.log('INFO: '.blue + 'using ' + 'sass'.yellow + ' for css');
-    app.use(require('koa-sass')(app.config.root + '/public/css/'));
+    app.use(require('koa-sass')(app.dir.css));
   }
 
   // STYLUS
   else if ( app.config.engines.css.template === 'stylus' ) {
     app.log('INFO: '.blue + 'using ' + 'stylus'.yellow + ' for css');
-    app.use(require('koa-stylus')(app.config.root + '/public/css/'));
+    app.use(require('koa-stylus')(app.dir.css));
   }
 
   // LESS
   // not working with iojs yet :/
   else if ( app.config.engines.css.template === 'less' ) {
     app.log('INFO: '.blue + 'using ' + 'less'.yellow + ' for css');
-    app.use(require('koa-less')('./public/css/'));
+    app.use(require('koa-less')(app.dir.css));
   }
 
   // >  - - - - - - - - <
@@ -46,8 +46,8 @@ module.exports = function(app) {
     let htmlEngine = require('koa-hbs');
 
     app.use(htmlEngine.middleware({
-      viewPath: app.base + '/app/views',
-      partialsPath:app.base + '/app/views/partials'
+      viewPath: app.dir.views,
+      partialsPath: app.dir.views + 'partials'
     }));
 
   // JADE
@@ -58,7 +58,7 @@ module.exports = function(app) {
     let htmlEngine = require('koa-jade');
 
     app.use(htmlEngine.middleware({
-      viewPath: app.base + '/app/views',
+      viewPath: app.dir.views,
       debug: app.config.debug,
       cache: app.config.cache,
       pretty: app.config.prettify.html,
@@ -72,7 +72,7 @@ module.exports = function(app) {
     app.log('INFO: '.blue + 'rendering templates with ' + app.config.engines.html.template.yellow);
 
     let htmlEngine = require('koajs-nunjucks');
-    app.use( htmlEngine(app.base + '/app/views', {}) );
+    app.use( htmlEngine(app.dir.views, {}) );
 
   // FLAT HTML (DOESN'T WORK YET)
   } else {
@@ -94,9 +94,7 @@ module.exports = function(app) {
   if ( app.config.cors === true ) app.use(require('koa-cors')());
 
   // SERVE STATIC FILES
-  app.use( require('koa-static')( app.config.root + '/public/') );
-
-
+  app.use( require('koa-static')( app.dir.public ) );
 
 
 };

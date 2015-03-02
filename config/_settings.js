@@ -7,6 +7,18 @@ module.exports = function (app) {
 
   app.name = 'Pog JS'; // the name of your app
 
+  // APP DIRECTORIES
+  app.dir = {
+    controllers : app.base + '/app/controllers/',
+    models : app.base + '/app/models/',
+    views : app.base + '/app/views/',
+    public : app.base + '/public/',
+    css : app.base + '/public/css/',
+    img : app.base + '/public/img/',
+    js : app.base + '/public/js/',
+    root : app.base
+  },
+
   app.config = {
 
     autoRouter : true, // whether or not to use the auto routing system (https://github.com/pogjs/router)
@@ -37,9 +49,15 @@ module.exports = function (app) {
       cssLibrary : false, // options: (axis|bourbon|nib) - set to false for none
     },
 
+    // defines when and where errors will be reported
     errorReporting : {
-      browser: true, // whether to send error message to browser, or display a generic error
-      file: true // write errors to /log/pog.log files
+      // whether to send error message to browser, or display a generic error.
+      // check the node console for errors if you set this to false.
+      browser: true,
+
+      // write errors to /log/pog.log files
+      // this needs work, doesn't log much yet
+      file: true
     },
 
     gzip : true, // whether to enable gzip compression
@@ -69,7 +87,7 @@ module.exports = function (app) {
     socket : {
       use: true, // WHETHER TO ENABLE SOCKETS
       port: 1982
-    }
+    },
 
   };
 

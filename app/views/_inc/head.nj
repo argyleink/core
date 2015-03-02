@@ -9,11 +9,11 @@
       <title>{{site.name}}</title>
     {% endif %}
 
-    <link rel="stylesheet" href="{{site.dir.css}}styles.css">
+    <link rel="stylesheet" href="{{site.public.css}}styles.css">
 
     {% if css %}
       {% for stylesheet in css %}
-        <script src="{{site.dir.css}}{{stylesheet}}"></script>
+        <script src="{{site.public.css}}{{stylesheet}}"></script>
       {% endfor %}
     {% endif %}
 

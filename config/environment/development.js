@@ -24,7 +24,7 @@ module.exports = function (app) {
   app.address = app.config.protocol + app.domain + ':'  + app.config.port + '/'; // base url
 
   // directories
-  app.dir = {
+  app.public = {
     css : app.address + 'css/',
     img : app.address + 'img/',
     lib : app.address + 'lib/',
