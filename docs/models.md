@@ -1,6 +1,6 @@
 # MODELS
 
-Pog includes a useful model helper function that will bootstrap all of the routes & controllers needed to make your models work. You will still need to create the controller and model files, but this should still greatly simplify	 the process.
+Pog includes a useful model helper that will bootstrap all of the routes & controllers needed to make your models work. You will still need to create the controller and model files, but this should still greatly simplify	 the process.
 
 
 ## DEFAULT
