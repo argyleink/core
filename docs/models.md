@@ -1,11 +1,11 @@
 # MODELS
 
-Pog includes a model a useful helper function that will bootstrap all of your routes & controllers needed to make it work. You will still need to create the controller and model files, but greatly simplifies the process.
+Pog includes a useful model helper function that will bootstrap all of the routes & controllers needed to make your models work. You will still need to create the controller and model files, but this should still greatly simplify	 the process.
 
 
 ## DEFAULT
 
-You can bootstrap a new model (with default settings) with one simple line of code (it's recommended to add this to app/routes.js):
+If you want to use the default settings, you can bootstrap a new model with one simple line of code (it's recommended to add this to app/routes.js):
 
 ```
 pog.model.load('blog')
