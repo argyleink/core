@@ -10,12 +10,12 @@ var browserSync = require('browser-sync'),
     dir         = {
       app       : 'server.js',
       // build : app.config.buildDir,
-      css       : app.config.publicDir + 'css/**/*.css',
-      img       : app.config.publicDir + 'img/**/*',
-      js        : [app.config.publicDir + 'js/**/*', 'app/**/*.js'],
-      public    : app.config.publicDir,
-      stylus    : app.config.publicDir + 'css/**/*.styl',
-      lib       : app.config.publicDir + 'lib/**/*'
+      css       : app.dir.public + 'css/**/*.css',
+      img       : app.dir.public + 'img/**/*',
+      js        : [app.dir.public + 'js/**/*', 'app/**/*.js'],
+      public    : app.dir.public,
+      stylus    : app.dir.public + 'css/**/*.styl',
+      lib       : app.dir.public + 'lib/**/*'
     },
     $           = require('gulp-load-plugins')(),
     reload      = browserSync.reload;
@@ -77,7 +77,7 @@ gulp.task('css', function () {
   ]}))
   // Concatenate and minify styles
   .pipe($.if('*.css', $.csso()))
-  .pipe(gulp.dest(app.config.publicDir + '_dist/css'))
+  .pipe(gulp.dest(app.dir.public + '_dist/css'))
   .pipe($.size({title: 'css'}));
 
   // CSS MINIFICATION WILL GO HERE. POSSIBLY SASS & LESS UNTIL THEY WORK IN IO
@@ -89,7 +89,7 @@ gulp.task('css', function () {
 
 // IMAGES
 gulp.task('img', function () {
-  return gulp.src(app.config.publicDir + 'img/**/*')
+  return gulp.src(app.dir.public + 'img/**/*')
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true

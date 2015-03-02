@@ -63,7 +63,7 @@ module.exports = function (app) {
     gzip : true, // whether to enable gzip compression
 
     logging : {
-      console : true // whether to allow tesla to log messages to the node console
+      console : true // whether to allow pog to log messages to the node console
     },
 
     port : 1981, // port to run the server on
@@ -78,14 +78,10 @@ module.exports = function (app) {
 
     protocol : 'http://', // options: (http|https)
 
-    publicDir : './public/', // public directory where images, javascript, css, etc is stored
-
-    root : rootPath, // path to the root of your server
-
     secret : 'supercalifragilisticexpialidocious', // placeholder for now, will be implemented later
 
     socket : {
-      use: true, // WHETHER TO ENABLE SOCKETS
+      use: false, // WHETHER TO ENABLE SOCKETS
       port: 1982
     },
 
