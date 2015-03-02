@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.3.0
+**First draft of models:**
+
+- add model docs
+- require model helper
+- remove trailing comma
+- add handler to render error pages
+- fix syntax error
+- add db configs
+- move comment block to top
+- add model helper
+- add model templates
+- add app.dir to hold app structure references
+- remove deleted files
+- add mongo & rethink templates
+- update dependencies
+- update logging
+- update logging
+- use app.log instead of console.log
+- update error reporting, logging & add db
+
 ## 0.2.2
 - fix includes in default jade template
 
