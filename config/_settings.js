@@ -10,14 +10,14 @@ module.exports = function (app) {
   // APP DIRECTORIES
   app.dir = {
     controllers : app.base + '/app/controllers/',
-    models : app.base + '/app/models/',
-    views : app.base + '/app/views/',
-    public : app.base + '/public/',
     css : app.base + '/public/css/',
     img : app.base + '/public/img/',
     js : app.base + '/public/js/',
-    root : app.base
-  },
+    models : app.base + '/app/models/',
+    public : app.base + '/public/',
+    root : app.base,
+    views : app.base + '/app/views/'
+  };
 
   app.config = {
 
