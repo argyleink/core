@@ -10,6 +10,7 @@ require(__dirname + '/config/_settings')(app); // MAIN APP SETTINGS
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'; // SET DEFAULT ENVIRONMENT
 
 let pog = app.pog = require('./lib/pog')(app); // INCLUDE POG LIB
+let model = app.model = require('./lib/models')(app); // INCLUDE POG LIB
 app.log = pog.log;
 pog.inform(app, 'start'); // START UP MESSAGE
 
