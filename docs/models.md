@@ -11,7 +11,7 @@ If you want to use the default settings, you can bootstrap a new model with one 
 pog.model.load('blog')
 ```
 
-This will automatically load  [app/controllers/blogController.js](app/controllers/blogController.js) as well as make the folling routes accessible:
+This will automatically load  [app/controllers/blogController.js](../app/controllers/blogController.js) as well as make the following routes accessible:
 
 - [http://localhost/blog/create](http://localhost/blog/create)  [ POST ]
 - [http://localhost/blog/delete](http://localhost/blog/delete)  [ DELETE ]
