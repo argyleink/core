@@ -38,7 +38,7 @@ pog.model.load('user', {
 });
 ```
 
-Notice the use of the ```base``` property above. This allows you the base of the url you want your model to live under. This create the following routes:
+Notice the use of the ```base``` property above. This allows you to append a "base" to the url you want your model to live under. The example above will create the following routes:
 
 - [http://localhost/api/v1/user/create](http://localhost/api/v1/user/create)      [ POST ]
 - [http://localhost/api/v1/user/info](http://localhost/api/v1/user/info)          [ POST ]
