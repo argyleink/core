@@ -10,11 +10,11 @@
 
         <link rel="shortcut icon" type="image/png" href="{{site.address}}favicon.png">
 
-        <link rel="stylesheet" href="{{site.dir.css}}styles.css">
+        <link rel="stylesheet" href="{{site.public.css}}styles.css">
 
         {{#if css}}
           {{#each css}}
-            <link rel="stylesheet" href="{{site.dir.css}}{{this}}">
+            <link rel="stylesheet" href="{{site.public.css}}{{this}}">
           {{/each}}
         {{/if}}
 

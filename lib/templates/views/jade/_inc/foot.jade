@@ -1,7 +1,7 @@
 //- Allows you to pass an array of page specific scripts to load
 if locals.js
 	each script in js
-		script(src='#{site.dir.js}#{script}')
+		script(src='#{site.public.js}#{script}')
 
 if ( locals.site.environment === 'development' )
 	//Livereload script rendered
