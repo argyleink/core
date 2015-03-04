@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.3.1
+- remove chalk
+
 ## 0.3.0
 **First draft of models:**
 
