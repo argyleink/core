@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.3.2
+- set model to false by default
+
 ## 0.3.1
 - remove chalk
 
