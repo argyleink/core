@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.3.3.
+- use site.public instead of site.dir for serving assets
+
 ## 0.3.2
 - set model to false by default
 
