@@ -28,7 +28,7 @@ module.exports = function (app) {
       port : 3000, // port to run the server on
     },
 
-    db : 'rethink', // rethink, mongo, couch, redis, mysql, postgress
+    db : false, // rethink, mongo, couch, redis, mysql, postgress
 
     cache : false, // whether to use caching
 
