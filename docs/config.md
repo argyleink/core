@@ -4,14 +4,14 @@ Pog is meant to both be useable out of the box and über-configurable. Most of t
 
 
 ##### APP NAME
-This isn't used in many place be default, but is available throughout the app should you ever need it.
+This isn't used in many places by default, but is available throughout the app should you ever need it.
 
 ```
 app.name = 'Pog JS'; // the name of your app
 ```
 
 ##### DIRECTORY STRUCTURE
-Pog use these references to link to files throughout the application. If we want to change the location of anything, you are welcome to, just make sure you update it here:
+Pog uses these references to link to files throughout the application. If we want to change the location of anything, you are welcome to, just make sure you update it here:
 
 ```
 app.dir = {
