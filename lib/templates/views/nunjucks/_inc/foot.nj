@@ -1,16 +1,18 @@
+{{bowerFoot}}
+
+{% if site.config.polyfills %}
+  <script src="{{site.address}}polyfill.js"></script>
+{% endif %}
+
+{% if site.config.sockets %}
+  <script src="{{site.address}}socket.io/socket.io.js"></script>
+	<script>
+		var socket = window.socket = io.connect();
+	</script>
+{% endif %}
+
 {% if js %}
   {% for script in js %}
     <script src="{{site.public.js}}{{script}}"></script>
   {% endfor %}
-{% endif %}
-
-{% if site.config.polyfills %}
-  <script src="/polyfill.js"></script>
-{% endif %}
-
-{% if site.config.socket.use %}
-  <script src="http://localhost:{{site.config.socket.port}}/socket.io/socket.io.js"></script>
-  <script>
-      var socket = io.connect('http://localhost:{{site.config.socket.port}');
-  </script>
 {% endif %}

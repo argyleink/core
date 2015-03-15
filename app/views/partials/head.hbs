@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
+  <head>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
-        <title>{{title}}</title>
+    <title>{{title}}</title>
 
-        <link rel="shortcut icon" type="image/png" href="{{site.address}}favicon.png">
+    <link rel="shortcut icon" type="image/png" href="{{site.address}}favicon.png">
 
-        <link rel="stylesheet" href="{{site.public.css}}styles.css">
+{{bowerHead}}
 
-        {{#if css}}
-          {{#each css}}
-            <link rel="stylesheet" href="{{site.public.css}}{{this}}">
-          {{/each}}
-        {{/if}}
+    <link rel="stylesheet" href="{{site.public.css}}styles.css">
 
-    </head>
+    {{#if css}}
+      {{#each css}}
+        <link rel="stylesheet" href="{{site.public.css}}{{this}}">
+      {{/each}}
+    {{/if}}
+
+  </head>
 
 <body>

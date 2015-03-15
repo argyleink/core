@@ -1,21 +1,21 @@
+{{bowerFoot}}
+
+{{#if site.config.polyfills}}
+	<script src="{{site.address}}polyfill.js"></script>
+{{/if}}
+
+{{#if site.config.sockets }}
+	<script src="{{site.address}}socket.io/socket.io.js"></script>
+	<script>
+		var socket = window.socket = io.connect();
+	</script>
+{{/if}}
+
 {{#if js}}
 	{{#each js}}
 		<script src="{{site.public.js}}{{this}}"></script>
 	{{/each}}
 {{/if}}
-
-{{#if site.config.polyfills}}
-	<script src="/polyfill.js"></script>
-{{/if}}
-
-
-{{#if site.config.socket.use }}
-	<script src="http://localhost:{{site.config.socket.port}}/socket.io/socket.io.js"></script>
-	<script>
-			var socket = io.connect("http://localhost:{{site.config.socket.port}}");
-	</script>
-{{/if}}
-
 
 </body>
 </html>
