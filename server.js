@@ -14,15 +14,12 @@ let model = app.model = require('./lib/models')(app); // INCLUDE POG LIB
 app.log = pog.log;
 pog.inform(app, 'start'); // START UP MESSAGE
 
+
 // REQUIRED SETTINGS & CONFIG FILES
 require(__dirname + '/config/environment/' + process.env.NODE_ENV)(app); // ENVIRONMENT SPECIFIC SETTINGS
 require(__dirname + '/config/server')(app, pog); // VIEW SETTINGS
 
-// ENABLE SOCKET.IO
-if (app.config.socket.use === true ) {
-  app.log('INFO: '.blue + 'enabling ' + 'socket.io'.yellow + ' server');
-  require('./app/sockets')(app);
-}
+app.pog = pog; // ADD POG OBJECT TO APP
 
 require('./app/routes')(app); // LOAD ANY CUSTOM ROUTES
 
@@ -30,11 +27,17 @@ if ( app.config.autoRouter === true ) {
   app.use(require('pog-router')); // INCLUDE AUTO ROUTER
 }
 
-// START THE APP BY LISTEN ON <PORT>
-if (!module.parent) app.listen( process.env.PORT || app.config.port, function( err ) {
+// START THE APP BY LISTENING ON <PORT>
+app.server = app.listen( process.env.PORT || app.config.port, function( err ) {
 
   if ( !err ) { // IF THERE'S NO ERRORS
+
+    // ENABLE SOCKET.IO
+    if (app.config.sockets === true ) require('./app/sockets')(app);
+
+    // TELL EVRYTHING IS GOOD TO GO
     pog.inform(app, 'done');
+
   } else { // IF SOMETHING WENT WRONG!
     pog.inform(app, 'error', err);
   }

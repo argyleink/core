@@ -80,10 +80,7 @@ module.exports = function (app) {
 
     secret : 'supercalifragilisticexpialidocious', // placeholder for now, will be implemented later
 
-    socket : {
-      use: false, // WHETHER TO ENABLE SOCKETS
-      port: 1982
-    },
+    sockets : false // whether to enable socket.io
 
   };
 
