@@ -1,7 +1,7 @@
 {
   "name": "pog-core",
-  "version": "0.3.3",
-  "description": "MVC style framework built for io or node.js",
+  "version": "0.3.4",
+  "description": "MVC style web framework built for iojs and node.js",
   "main": "server.js",
   "private": false,
   "author": {
@@ -46,6 +46,7 @@
     "koa-less": "0.0.3",
     "koa-polyfills": "^2.0.0",
     "koa-route": "^2.4.0",
+    "koa-sass": "^1.0.0",
     "koa-static": "^1.4.9",
     "koa-stylus": "0.0.3",
     "koajs-nunjucks": "^1.0.1",
