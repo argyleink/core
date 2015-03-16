@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.0
+**Update for adding bower files via command line:**
+- add bower boolean to main config file
+- add bower.json & .bowerrc files
+- add app.public.components & app.dir.components to config
+- remove {{bowerHead}} && {{bowerFoot}} placeholders from templates
+
 ## 0.3.4
 - fix socket.io issue and update to run on same port as pog
 - add bower placeholder to views
