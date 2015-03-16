@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.2
+- gitkeep empty folders
+- don't load models in server.js
+
 ## 0.4.1
 - add custom route example in routes.js
 - remove model templates from model folder
