@@ -12,6 +12,7 @@ module.exports = function (app) {
 
   // directories
   app.public = {
+    components : app.address + 'components/',
     css : app.address + 'css/',
     img : app.address + 'img/',
     lib : app.address + 'lib/',
