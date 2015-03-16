@@ -9,8 +9,6 @@
       <title>{{site.name}}</title>
     {% endif %}
 
-{{bowerHead}}
-
     <link rel="stylesheet" href="{{site.public.css}}styles.css">
 
     {% if css %}
