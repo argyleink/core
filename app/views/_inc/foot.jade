@@ -1,9 +1,9 @@
 //- Load polyfill script
-if ( locals.site.config.polyfills === true )	
+if locals.site.config.polyfills
 	script(src='#{site.address}polyfill.js')
 
 //- ENABLE SOCKET.IO
-if ( locals.site.config.sockets === true )	
+if locals.site.config.sockets
 	script(src="#{site.address}socket.io/socket.io.js")
 	script.
 		var socket = window.socket = io.connect();
