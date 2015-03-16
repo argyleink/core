@@ -10,6 +10,7 @@ module.exports = function (app) {
   // APP DIRECTORIES
   app.dir = {
     controllers : app.base + '/app/controllers/',
+    components : app.base + '/public/components/',
     css : app.base + '/public/css/',
     img : app.base + '/public/img/',
     js : app.base + '/public/js/',
@@ -22,6 +23,8 @@ module.exports = function (app) {
   app.config = {
 
     autoRouter : true, // whether or not to use the auto routing system (https://github.com/pogjs/router)
+
+    bower : false, // whether we want to use bower for front-end dependenciees
 
     browserSync : {
       use : true,
