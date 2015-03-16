@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.1
+- add custom route example in routes.js
+- remove model templates from model folder
+- move model template to lib/templates folder
+
 ## 0.4.0
 **Update for adding bower files via command line:**
 - add bower boolean to main config file
